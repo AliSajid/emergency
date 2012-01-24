@@ -1,11 +1,12 @@
 Emergency::Application.routes.draw do
-  resources :investigations
+  root :to => "patients/new"
+	resources :patients
+  
+  #resources :investigations
 
-  resources :initial_treatments
+  #resources :initial_treatments
 
-  resources :complaints
-
-  resources :patients
+  #resources :complaints
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
