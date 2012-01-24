@@ -1,6 +1,6 @@
 class Patient < ActiveRecord::Base
-	validates :fname, :presence => true
-	validates :lname, :presence => true
+	validates :first_name, :presence => true
+	validates :last_name, :presence => true
 	
 	has_many :complaints
 	has_many :investigations
@@ -8,7 +8,7 @@ class Patient < ActiveRecord::Base
 	
 	
 	def name
-		"#{fname} #{lname}"
+		"#{first_name} #{last_name}"
 	end
 	
 end
