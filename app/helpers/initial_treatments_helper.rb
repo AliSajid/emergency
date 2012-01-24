@@ -1,0 +1,2 @@
+module InitialTreatmentsHelper
+end

@@ -1,0 +1,25 @@
+<%= form_for(@initial_treatment) do |f| %>
+  <% if @initial_treatment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@initial_treatment.errors.count, "error") %> prohibited this initial_treatment from being saved:</h2>
+
+      <ul>
+      <% @initial_treatment.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :patient_id %><br />
+    <%= f.text_field :patient_id %>
+  </div>
+  <div class="field">
+    <%= f.label :treatment %><br />
+    <%= f.text_field :treatment %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  date_arrived: 2012-01-24
+  time_arrived: 2012-01-24 00:27:49
+  mlc_status: false
+  first_name: MyString
+  last_name: MyString
+  age_boolean: false
+  relation: MyString
+  address: MyText
+
+two:
+  date_arrived: 2012-01-24
+  time_arrived: 2012-01-24 00:27:49
+  mlc_status: false
+  first_name: MyString
+  last_name: MyString
+  age_boolean: false
+  relation: MyString
+  address: MyText

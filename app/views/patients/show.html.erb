@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Date arrived:</b>
+  <%= @patient.date_arrived %>
+</p>
+
+<p>
+  <b>Time arrived:</b>
+  <%= @patient.time_arrived %>
+</p>
+
+<p>
+  <b>Mlc status:</b>
+  <%= @patient.mlc_status %>
+</p>
+
+<p>
+  <b>First name:</b>
+  <%= @patient.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @patient.last_name %>
+</p>
+
+<p>
+  <b>Age boolean:</b>
+  <%= @patient.age_boolean %>
+</p>
+
+<p>
+  <b>Relation:</b>
+  <%= @patient.relation %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @patient.address %>
+</p>
+
+
+<%= link_to 'Edit', edit_patient_path(@patient) %> |
+<%= link_to 'Back', patients_path %>
