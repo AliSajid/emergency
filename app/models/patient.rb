@@ -11,4 +11,21 @@ class Patient < ActiveRecord::Base
 		"#{first_name} #{last_name}"
 	end
 	
+	def gender
+		if gender_boolean
+			"Female"
+			else
+				"Male"
+			end
+	end
+	
+	def mlc
+		if mlc_status
+			"MLC case"
+		else
+			"Non-MLC case"
+		end
+		
+	end
+	
 end
