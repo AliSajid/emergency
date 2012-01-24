@@ -1,5 +1,5 @@
 Emergency::Application.routes.draw do
-  root :to => "patients/new"
+  root :to => "patients#new"
 	resources :patients
   
   #resources :investigations
