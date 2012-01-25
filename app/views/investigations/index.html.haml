@@ -1,0 +1,17 @@
+%h1 Listing investigations
+%table
+  %tr
+    %th Patient
+    %th Investigation
+    %th
+    %th
+    %th
+  - @investigations.each do |investigation|
+    %tr
+      %td= investigation.patient_id
+      %td= investigation.investigation
+      %td= link_to 'Show', investigation
+      %td= link_to 'Edit', edit_investigation_path(investigation)
+      %td= link_to 'Destroy', investigation, confirm: 'Are you sure?', method: :delete
+%br/
+= link_to 'New Investigation', new_investigation_path

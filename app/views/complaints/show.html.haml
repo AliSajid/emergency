@@ -1,0 +1,10 @@
+%p#notice= notice
+%p
+  %b Patient:
+  = @complaint.patient_id
+%p
+  %b Complaint:
+  = @complaint.complaint
+= link_to 'Edit', edit_complaint_path(@complaint)
+|
+\#{link_to 'Back', complaints_path}

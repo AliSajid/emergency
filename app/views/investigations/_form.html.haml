@@ -1,0 +1,19 @@
+= form_for(@investigation) do |f|
+  - if @investigation.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@investigation.errors.count, "error")
+        prohibited this investigation from being saved:
+      %ul
+        - @investigation.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :patient_id
+    %br/
+    = f.text_field :patient_id
+  .field
+    = f.label :investigation
+    %br/
+    = f.text_field :investigation
+  .actions
+    = f.submit

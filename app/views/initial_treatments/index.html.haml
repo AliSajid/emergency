@@ -1,0 +1,17 @@
+%h1 Listing initial_treatments
+%table
+  %tr
+    %th Patient
+    %th Treatment
+    %th
+    %th
+    %th
+  - @initial_treatments.each do |initial_treatment|
+    %tr
+      %td= initial_treatment.patient_id
+      %td= initial_treatment.treatment
+      %td= link_to 'Show', initial_treatment
+      %td= link_to 'Edit', edit_initial_treatment_path(initial_treatment)
+      %td= link_to 'Destroy', initial_treatment, confirm: 'Are you sure?', method: :delete
+%br/
+= link_to 'New Initial treatment', new_initial_treatment_path

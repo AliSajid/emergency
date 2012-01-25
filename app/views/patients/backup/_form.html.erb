@@ -1,0 +1,55 @@
+<%= form_for(@patient) do |f| %>
+  <% if @patient.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@patient.errors.count, "error") %> prohibited this patient from being saved:</h2>
+
+      <ul>
+      <% @patient.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date_arrived %><br />
+    <%= f.date_select :date_arrived %>
+  </div>
+  <div class="field">
+    <%= f.label :time_arrived %><br />
+    <%= f.time_select :time_arrived %>
+  </div>
+  <div class="field">
+    <%= f.label :mlc_status %><br />
+    <%= f.radio_button :mlc_status, true, :checked => true %> MLC
+    <%= f.radio_button :mlc_status, false %> Non-MLC
+  </div>
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :age %><br />
+    <%= f.text_field :age %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %><br />
+    <%= f.radio_button :gender_boolean, false, :checked => true %> Male
+    <%= f.radio_button :gender_boolean, true %> Female
+  </div>
+  <div class="field">
+    <%= f.label :relation %><br />
+    <%= f.text_field :relation %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_area :address %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
