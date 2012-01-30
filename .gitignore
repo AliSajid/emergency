@@ -20,3 +20,6 @@
 
 #Ignore my update script
 update_repository
+
+.rvmrc
+
