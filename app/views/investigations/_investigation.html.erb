@@ -1,0 +1,8 @@
+<%= div_for investigation do %>
+  <h3>
+    <span class='actions'>
+       <%= link_to 'Delete', patient_investigation_path(:patient_id => @patient, :id => investigation), :confirm => 'Are you sure?', :method => :delete %>
+    </span>
+  </h3>
+  <%= investigation.investigation %>
+<% end %>
