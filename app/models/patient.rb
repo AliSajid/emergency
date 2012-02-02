@@ -28,4 +28,11 @@ class Patient < ActiveRecord::Base
 		
 	end
 	
+	def time
+		created_at.in_time_zone("Karachi").strftime("%r %Z")
+	end
+	
+	def date
+		created_at.strftime("%d/%m/%Y")
+	end
 end

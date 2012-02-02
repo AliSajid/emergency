@@ -1,10 +1,7 @@
-%p#notice= notice
 %p
   %b Patient:
-  = @investigation.patient_id
+  = @investigation.patient.name
 %p
   %b Investigation:
   = @investigation.investigation
 = link_to 'Edit', edit_investigation_path(@investigation)
-|
-\#{link_to 'Back', investigations_path}

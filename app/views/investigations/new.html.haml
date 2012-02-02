@@ -1,2 +1,8 @@
-%h1 New investigation
-= render 'form'
+%h3 New Investigation
+= form_for([@patient, @patient.investigations.new]) do |f|
+  .field
+    = f.label :investigation
+    %br/
+    = f.text_field :investigation
+  .actions
+    = f.submit 'Add Investigation'

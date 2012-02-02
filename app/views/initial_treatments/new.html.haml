@@ -1,2 +1,8 @@
-%h1 New initial_treatment
-= render 'form'
+%h3 New Treatment
+= form_for([@patient, @patient.initial_treatments.new]) do |f|
+  .field
+    = f.label :treatment
+    %br/
+    = f.text_field :treatment
+  .actions
+    = f.submit 'Add Treatment'

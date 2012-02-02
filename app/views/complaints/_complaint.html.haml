@@ -1,5 +1,5 @@
 = div_for complaint do
-  %h3
+  %p
     %span.actions
-      = link_to 'Delete', patient_complaint_path(:patient_id => @patient, :id => complaint), :confirm => 'Are you sure?', :method => :delete
+      = link_to 'Delete', patient_complaint_path(:patient_id => @patient, :id => complaint), :confirm => 'Are you sure you want to delete this complaint?', :method => :delete
   = complaint.complaint
