@@ -1,17 +1,8 @@
 %h3 New Treatment
-= form_for([@treatment, @treatment.treatments.new]) do |f|
-  - if @treatment.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(@treatment.errors.count, "error")
-        prohibited this complaint from being saved:
-      %ul
-        - @treatment.errors.full_messages.each do |msg|
-          %li= msg
+= form_for([@patient, @patient.initial_treatments.new]) do |f|
   .field
     = f.label :treatment
     %br/
-    = f.text_field :treatment
+    = f.text_field :initial_treatments
   .actions
     = f.submit
-s

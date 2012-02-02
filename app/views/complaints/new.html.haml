@@ -1,13 +1,5 @@
 %h3 New Complaint
 = form_for([@patient, @patient.complaints.new]) do |f|
-  - if @complaint.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(@complaint.errors.count, "error")
-        prohibited this complaint from being saved:
-      %ul
-        - @complaint.errors.full_messages.each do |msg|
-          %li= msg
   .field
     = f.label :complaint
     %br/
