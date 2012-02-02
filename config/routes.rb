@@ -1,13 +1,10 @@
 Emergency::Application.routes.draw do
   root :to => "patients#new"
-=======
 	resources :patients do
 		resources :investigations
 		resources :initial_treatments
 		resources :complaints
 	end
-
->>>>>>> views2:config/routes.rb
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

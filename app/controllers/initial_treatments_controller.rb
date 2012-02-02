@@ -1,6 +1,4 @@
 class InitialTreatmentsController < ApplicationController
-
-=======
 	before_filter :load_patient
 	def create
 		@treatment = @patient.initial_treatments.new(params[:initial_treatment])
@@ -8,13 +6,10 @@ class InitialTreatmentsController < ApplicationController
 			redirect_to @patient, :notice => 'Treatment Added!'
 			else
 			redirect_to @patient, :alert => 'Unable to add treatment!'
->>>>>>> views2:app/controllers/initial_treatments_controller.rb
 		end
 	end
 
 	def destroy
-
-=======
 		@treatment = @patient.initial_treatments.find(params[:id])
 		@treatment.destroy
 		redirect_to @patient, :notice => 'Treatment deleted!'
@@ -24,5 +19,4 @@ private
 	def load_patient
 		@patient = Patient.find(params[:patient_id])
 	end
->>>>>>> views2:app/controllers/initial_treatments_controller.rb
 end
