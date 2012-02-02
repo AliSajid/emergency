@@ -1,7 +1,7 @@
 class InitialTreatmentsController < ApplicationController
 	before_filter :load_patient
 	def create
-		@treatment = @patient.initial_treatments.new(params[:treatment])
+		@treatment = @patient.initial_treatments.new(params[:initial_treatment])
 		if @treatment.save
 			redirect_to @patient, :notice => 'Treatment Added!'
 			else
