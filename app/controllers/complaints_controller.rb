@@ -1,22 +1,22 @@
 class ComplaintsController < ApplicationController
 	before_filter :load_patient
 	def create
-		@investigation = @patient.investigations.new(params[:investigation])
-		if @investigation.save
-			redirect_to @patient, :notice => 'Thanks for your investigation'
+		@complaint = @patient.complaints.new(params[:complaint])
+		if @complaint.save
+			redirect_to @patient, :notice => 'Complaint Added!'
 			else
-			redirect_to @patient, :alert => 'Unable to add investigation'
+			redirect_to @patient, :alert => 'Unable to add complaint!'
 		end
 	end
 
 	def destroy
-		@investigation = @patient.investigations.find(params[:id])
-		@investigation.destroy
-		redirect_to @patient, :notice => 'investigation deleted'
+		@complaint = @patient.complaints.find(params[:id])
+		@complaint.destroy
+		redirect_to @patient, :notice => 'Complaint deleted!'
 	end
 
 private
 	def load_patient
-		@patient = patient.find(params[:patient_id])
+		@patient = Patient.find(params[:patient_id])
 	end
 end

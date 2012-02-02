@@ -1,8 +1,8 @@
 %h3 New Complaint
-= form_for([@patient, @patient.complaints.new]) do |f|
+= form_for [@patient, @patient.complaints.new] do |f|
   .field
     = f.label :complaint
     %br/
     = f.text_field :complaint
   .actions
-    = f.submit
+    = f.submit "Add"

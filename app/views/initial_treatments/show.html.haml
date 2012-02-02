@@ -1,10 +1,8 @@
 %p#notice= notice
 %p
   %b Patient:
-  = @initial_treatment.patient_id
+  = @initial_treatment.patient.name
 %p
   %b Treatment:
   = @initial_treatment.treatment
 = link_to 'Edit', edit_initial_treatment_path(@initial_treatment)
-|
-\#{link_to 'Back', initial_treatments_path}

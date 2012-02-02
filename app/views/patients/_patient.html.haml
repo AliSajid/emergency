@@ -1,10 +1,10 @@
 = div_for patient do
   %p
     %b Date arrived:
-    = @patient.date_arrived
+    = @patient.date
   %p
     %b Time arrived:
-    = @patient.time_arrived
+    = @patient.time
   %p
     %b MLC status:
     = @patient.mlc
@@ -27,3 +27,4 @@
     %b Address:
     = @patient.address
 = link_to 'Edit', edit_patient_path(@patient)
+= link_to 'Back', patients_path

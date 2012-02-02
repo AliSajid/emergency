@@ -1,0 +1,5 @@
+= div_for initial_treatment do
+  %p
+    %span.actions
+      = link_to 'Delete', patient_initial_treatment_path(:patient_id => @patient, :id => initial_treatment), :confirm => 'Are you sure?', :method => :delete
+  = initial_treatment.treatment

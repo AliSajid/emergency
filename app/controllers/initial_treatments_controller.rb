@@ -1,22 +1,22 @@
 class InitialTreatmentsController < ApplicationController
 	before_filter :load_patient
 	def create
-		@investigation = @patient.investigations.new(params[:investigation])
-		if @investigation.save
-			redirect_to @patient, :notice => 'Thanks for your investigation'
+		@treatment = @patient.initial_treatments.new(params[:treatment])
+		if @treatment.save
+			redirect_to @patient, :notice => 'Treatment Added!'
 			else
-			redirect_to @patient, :alert => 'Unable to add investigation'
+			redirect_to @patient, :alert => 'Unable to add treatment!'
 		end
 	end
 
 	def destroy
-		@investigation = @patient.investigations.find(params[:id])
-		@investigation.destroy
-		redirect_to @patient, :notice => 'investigation deleted'
+		@treatment = @patient.initial_treatments.find(params[:id])
+		@treatment.destroy
+		redirect_to @patient, :notice => 'Treatment deleted!'
 	end
 
 private
 	def load_patient
-		@patient = patient.find(params[:patient_id])
+		@patient = Patient.find(params[:patient_id])
 	end
 end

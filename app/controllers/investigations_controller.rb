@@ -3,20 +3,20 @@ class InvestigationsController < ApplicationController
 	def create
 		@investigation = @patient.investigations.new(params[:investigation])
 		if @investigation.save
-			redirect_to @patient, :notice => 'Thanks for your investigation'
+			redirect_to @patient, :notice => 'Investigation added!'
 			else
-			redirect_to @patient, :alert => 'Unable to add investigation'
+			redirect_to @patient, :alert => 'Unable to add investigation!'
 		end
 	end
 
 	def destroy
 		@investigation = @patient.investigations.find(params[:id])
 		@investigation.destroy
-		redirect_to @patient, :notice => 'investigation deleted'
+		redirect_to @patient, :notice => 'Investigation deleted!'
 	end
 
 private
 	def load_patient
-		@patient = patient.find(params[:patient_id])
+		@patient = Patient.find(params[:patient_id])
 	end
 end
