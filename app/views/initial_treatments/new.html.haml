@@ -1,2 +1,17 @@
-%h1 New initial_treatment
-= render 'form'
+%h3 New Treatment
+= form_for([@treatment, @treatment.treatments.new]) do |f|
+  - if @treatment.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@treatment.errors.count, "error")
+        prohibited this complaint from being saved:
+      %ul
+        - @treatment.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :treatment
+    %br/
+    = f.text_field :treatment
+  .actions
+    = f.submit
+s

@@ -1,31 +1,13 @@
-%p#notice= notice
-%p
-  %b Date arrived:
-  = @patient.date_arrived
-%p
-  %b Time arrived:
-  = @patient.time_arrived
-%p
-  %b MLC status:
-  = @patient.mlc
-%p
-  %b First name:
-  = @patient.first_name
-%p
-  %b Last name:
-  = @patient.last_name
-%p
-  %b Age
-  = @patient.age
-%p
-  %b Gender
-  = @patient.gender
-%p
-  %b S/O W/O D/O:
-  = @patient.relation
-%p
-  %b Address:
-  = @patient.address
-= link_to 'Edit', edit_patient_path(@patient)
-|
-\#{link_to 'Back', patients_path}
+= render @patient
+%h3 Complaints
+#complaints
+  = render @patient.complaints
+= render :file => 'complaints/new'
+%h3 Investigations
+#investigations
+  = render @patient.investigations
+= render :file => 'investigations/new'
+%h3 Treatments Done
+#treatments
+  = render @patient.treatments
+= render :file => 'treatments/new'

@@ -1,16 +1,4 @@
 %h1 New patient
 = render 'form'
 
-%h2 Initial Complaints
-#initial_complaints
-	= render :file => 'complaints/form'
-
-%h2 Initial Investigations
-#initial_investigations
-	= render :file => 'investigations/form'
-
-%h2 Initial treatment
-#initial_treatment
-	= render :file => 'initial_treatments/form'
-
 = link_to 'Back', patients_path

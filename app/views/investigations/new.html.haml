@@ -1,2 +1,16 @@
-%h1 New investigation
-= render 'form'
+%h3 New Investigation
+= form_for([@patient, @patient.investigations.new]) do |f|
+  - if @investigation.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@investigation.errors.count, "error")
+        prohibited this investigation from being saved:
+      %ul
+        - @investigation.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :investigation
+    %br/
+    = f.text_field :investigation
+  .actions
+    = f.submit
