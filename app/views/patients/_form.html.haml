@@ -8,14 +8,6 @@
         - @patient.errors.full_messages.each do |msg|
           %li= msg
   .field
-    = f.label :date_arrived
-    %br/
-    = f.date_select :date_arrived
-  .field
-    = f.label :time_arrived
-    %br/
-    = f.time_select :time_arrived
-  .field
     = f.label :mlc_status
     %br/
     = f.radio_button :mlc_status, true, :checked => true

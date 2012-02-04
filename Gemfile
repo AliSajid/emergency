@@ -20,6 +20,8 @@ gem 'jquery-rails'
 gem 'execjs'
 gem 'therubyracer'
 gem 'haml'
+gem 'devise'
+gem 'kaminari'
 
 
 # To use ActiveModel has_secure_password
@@ -29,12 +31,18 @@ gem 'haml'
 # gem 'unicorn'
 
 # Deploy with Capistrano
-# gem 'capistrano'
+ gem 'capistrano'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
-group :test do
+group :development, :test do
   # Pretty printed test output
   gem 'turn', '~> 0.8.3', :require => false
+  gem 'capybara'
+  gem 'rspec-rails'
+  gem 'haml-rails'
+  gem 'hpricot'
+  gem 'ruby_parser'
+  gem 'web-app-theme', '~> 0.8.0'
 end
