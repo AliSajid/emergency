@@ -24,7 +24,7 @@ gem 'devise'
 gem 'kaminari'
 gem 'haml-rails'
 gem 'thin'
-gem 'libv8', '3.3.10.4'
+gem 'heroku'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -33,7 +33,7 @@ gem 'libv8', '3.3.10.4'
 # gem 'unicorn'
 
 # Deploy with Capistrano
- gem 'capistrano'
+ #gem 'capistrano'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
