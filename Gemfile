@@ -24,6 +24,7 @@ gem 'devise'
 gem 'kaminari'
 gem 'haml-rails'
 gem 'thin'
+gem 'libv8', '3.3.10.4'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
