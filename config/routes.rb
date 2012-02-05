@@ -1,4 +1,6 @@
 Emergency::Application.routes.draw do
+  devise_for :users
+
   root :to => "patients#new"
 	resources :patients do
 		resources :investigations
