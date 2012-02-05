@@ -24,7 +24,6 @@ gem 'devise'
 gem 'kaminari'
 gem 'haml-rails'
 gem 'thin'
-gem 'sqlite3'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -46,4 +45,5 @@ group :development, :test do
   gem 'hpricot'
   gem 'ruby_parser'
   gem 'web-app-theme', '~> 0.8.0'
+  gem 'sqlite3'
 end
