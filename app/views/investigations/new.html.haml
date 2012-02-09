@@ -1,5 +1,5 @@
 %h3 New Investigation
-= form_for([@patient, @patient.investigations.new]) do |f|
+= form_for [@patient, @patient.investigations.new], :html => {:style => 'display: none;'} do |f|
   .field
     = f.label :investigation
     %br/

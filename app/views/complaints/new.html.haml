@@ -1,5 +1,5 @@
 %h3 New Complaint
-= form_for [@patient, @patient.complaints.new] do |f|
+= form_for [@patient, @patient.complaints.new], :html => {:style => 'display: none;'} do |f|
   .field
     = f.label :complaint
     %br/
