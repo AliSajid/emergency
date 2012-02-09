@@ -19,7 +19,11 @@ class ComplaintsController < ApplicationController
 	def destroy
 		@complaint = @patient.complaints.find(params[:id])
 		@complaint.destroy
-		redirect_to @patient, :notice => 'Complaint deleted!'
+		respond_to do |format|
+			format.html { redirect_to @article, :notice => 'Comment deleted' }
+			format.js
+		end
+
 	end
 
 private

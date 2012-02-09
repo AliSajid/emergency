@@ -20,8 +20,10 @@ class InvestigationsController < ApplicationController
 	def destroy
 		@investigation = @patient.investigations.find(params[:id])
 		@investigation.destroy
-
-		redirect_to @patient, :notice => 'Investigation deleted!'
+		respond_to do |format|
+			format.html { redirect_to @article, :notice => 'Comment deleted' }
+			format.js
+		end
 	end
 
 private

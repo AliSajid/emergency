@@ -19,7 +19,10 @@ class InitialTreatmentsController < ApplicationController
 	def destroy
 		@treatment = @patient.initial_treatments.find(params[:id])
 		@treatment.destroy
-		redirect_to @patient, :notice => 'Treatment deleted!'
+		respond_to do |format|
+			format.html { redirect_to @article, :notice => 'Comment deleted' }
+			format.js
+		end
 	end
 
 private
