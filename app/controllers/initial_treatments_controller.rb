@@ -3,9 +3,16 @@ class InitialTreatmentsController < ApplicationController
 	def create
 		@treatment = @patient.initial_treatments.new(params[:initial_treatment])
 		if @treatment.save
-			redirect_to @patient, :notice => 'Treatment Added!'
+			respond_to do |format|
+				format.html {redirect_to @patient, :notice => 'Treatment Added!'}
+				format.js
+			end
+			
 			else
-			redirect_to @patient, :alert => 'Unable to add treatment!'
+				respond_to do |format|
+				format.html {redirect_to @patient, :alert => 'Unable to add treatment!'}
+				format.js {render 'fail_create.js.erb'}
+			end
 		end
 	end
 

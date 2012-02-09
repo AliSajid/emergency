@@ -3,9 +3,16 @@ class ComplaintsController < ApplicationController
 	def create
 		@complaint = @patient.complaints.new(params[:complaint])
 		if @complaint.save
-			redirect_to @patient, :notice => 'Complaint Added!'
+			respond_to do |format|
+				format.html {redirect_to @patient, :notice => 'Complaint Added!'}
+				format.js
+			end
+			
 			else
-			redirect_to @patient, :alert => 'Unable to add complaint!'
+				respond_to do |format|
+				format.html {redirect_to @patient, :alert => 'Unable to add complaint!'}
+				format.js {render 'fail_create.js.erb'}
+			end
 		end
 	end
 
