@@ -4,9 +4,16 @@ class InvestigationsController < ApplicationController
 	def create
 		@investigation = @patient.investigations.new(params[:investigation])
 		if @investigation.save
-			redirect_to @patient, :notice => 'Investigation added!'
+			respond_to do |format|
+				format.html {redirect_to @patient, :notice => 'Investigation Added!'}
+				format.js
+			end
+			
 			else
-			redirect_to @patient, :alert => 'Unable to add investigation!'
+				respond_to do |format|
+				format.html {redirect_to @patient, :alert => 'Unable to add investigation!'}
+				format.js {render 'fail_create.js.erb'}
+			end
 		end
 	end
 
