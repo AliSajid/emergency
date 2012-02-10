@@ -5,9 +5,9 @@ display: none;
 }
 
 /* Ensure the content spans the full width */
-#complaints, #investigations, #treatments
+#complaints.box, #investigations.box, #treatments.box
 {
-	width: 33%; margin: 5px; float:left;
+	width: 33%; margin: 5px; border-style: solid; border-width:3px; padding: 2px;
 }
 /* Change text colour to black (useful for light text on a dark background) */
 .lighttext

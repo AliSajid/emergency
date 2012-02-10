@@ -3,13 +3,16 @@
 = render @patient
 %h3 Complaints
 #complaints
-  = render @patient.complaints
-= link_to "New Complaint", new_patient_complaint_path(@patient, :format => :js), :remote => true, :id => 'new_complaint_link'
+  .box
+    = render @patient.complaints
+    = link_to "New Complaint", new_patient_complaint_path(@patient, :format => :js), :remote => true, :id => 'new_complaint_link'
 %h3 Investigations
 #investigations
-  = render @patient.investigations
-= link_to "New Investigation", new_patient_investigation_path(@patient, :format => :js), :remote => true, :id => 'new_investigation_link'
+  .box
+    = render @patient.investigations
+    = link_to "New Investigation", new_patient_investigation_path(@patient, :format => :js), :remote => true, :id => 'new_investigation_link'
 %h3 Treatments Done
 #treatments
-  = render @patient.initial_treatments
-= link_to "New Treatment", new_patient_initial_treatment_path(@patient, :format => :js), :remote => true, :id => 'new_treatment_link'
+  .box
+    = render @patient.initial_treatments
+    = link_to "New Treatment", new_patient_initial_treatment_path(@patient, :format => :js), :remote => true, :id => 'new_treatment_link'
