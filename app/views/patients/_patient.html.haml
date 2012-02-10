@@ -26,5 +26,6 @@
   %p
     %b Address:
     = @patient.address
-  = link_to 'Edit', edit_patient_path(@patient)
-  = link_to 'Back', patients_path
+  .noprint
+    = link_to 'Edit', edit_patient_path(@patient)
+    = link_to 'Back', patients_path
