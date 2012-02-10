@@ -2,16 +2,15 @@
   .right.column
     = render :partial => "sidebar"
 = render @patient
-.float-left
-  #complaints
-    %h3 Complaints
-    = render @patient.complaints
-    = link_to "New Complaint", new_patient_complaint_path(@patient, :format => :js), :remote => true, :id => 'new_complaint_link'
-  #nvestigations
-    %h3 Investigations
-    = render @patient.investigations
-    = link_to "New Investigation", new_patient_investigation_path(@patient, :format => :js), :remote => true, :id => 'new_investigation_link'
-  #treatments
-    %h3 Treatments Done
-    = render @patient.initial_treatments
-    = link_to "New Treatment", new_patient_initial_treatment_path(@patient, :format => :js), :remote => true, :id => 'new_treatment_link'
+#complaints
+  %h3 Complaints
+  = render @patient.complaints
+  = link_to "New Complaint", new_patient_complaint_path(@patient, :format => :js), :remote => true, :id => 'new_complaint_link'
+#investigations
+  %h3 Investigations
+  = render @patient.investigations
+  = link_to "New Investigation", new_patient_investigation_path(@patient, :format => :js), :remote => true, :id => 'new_investigation_link'
+#treatments
+  %h3 Treatments Done
+  = render @patient.initial_treatments
+  = link_to "New Treatment", new_patient_initial_treatment_path(@patient, :format => :js), :remote => true, :id => 'new_treatment_link'
