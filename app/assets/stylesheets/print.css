@@ -5,7 +5,7 @@ display: none;
 }
 
 /* Ensure the content spans the full width */
-#float-left
+.float-left
 {
 	float: left; width: 33%; margin: 5px; border-style: solid; border-width:3px; padding: 2px;
 }
