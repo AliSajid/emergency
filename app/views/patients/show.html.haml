@@ -1,18 +1,20 @@
-.right.column
-  = render :partial => "sidebar"
+#sidebar
+  .right.column
+    = render :partial => "sidebar"
 = render @patient
-%h3 Complaints
-#complaints
-  .box
-    = render @patient.complaints
-    = link_to "New Complaint", new_patient_complaint_path(@patient, :format => :js), :remote => true, :id => 'new_complaint_link'
-%h3 Investigations
-#investigations
-  .box
-    = render @patient.investigations
-    = link_to "New Investigation", new_patient_investigation_path(@patient, :format => :js), :remote => true, :id => 'new_investigation_link'
-%h3 Treatments Done
-#treatments
-  .box
-    = render @patient.initial_treatments
-    = link_to "New Treatment", new_patient_initial_treatment_path(@patient, :format => :js), :remote => true, :id => 'new_treatment_link'
+#float-left
+  #complaints
+    .box
+      %h3 Complaints
+      = render @patient.complaints
+      = link_to "New Complaint", new_patient_complaint_path(@patient, :format => :js), :remote => true, :id => 'new_complaint_link'
+  #investigations
+    .box
+      %h3 Investigations
+      = render @patient.investigations
+      = link_to "New Investigation", new_patient_investigation_path(@patient, :format => :js), :remote => true, :id => 'new_investigation_link'
+  #treatments
+    .box
+      %h3 Treatments Done
+      = render @patient.initial_treatments
+      = link_to "New Treatment", new_patient_initial_treatment_path(@patient, :format => :js), :remote => true, :id => 'new_treatment_link'
