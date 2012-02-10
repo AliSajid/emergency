@@ -12,7 +12,6 @@
     %th
     %th
     %th
-    %th
   - @patients.each do |patient|
     %tr
       %td= patient.date
@@ -26,6 +25,5 @@
       %td= link_to 'Show', patient
       %td= link_to 'Edit', edit_patient_path(patient)
       %td= link_to 'Destroy', patient, confirm: 'Are you sure?', method: :delete
-      %td= link_to 'Print', patient, javascript:onclick="window.print();return false;"
 %br/
 = link_to 'New Patient', new_patient_path
