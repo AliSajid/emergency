@@ -9,11 +9,8 @@
     %b MLC status:
     = @patient.mlc
   %p
-    %b First name:
-    = @patient.first_name
-  %p
-    %b Last name:
-    = @patient.last_name
+    %b Patient name:
+    = @patient.name
   %p
     %b Age
     = @patient.age
@@ -26,6 +23,6 @@
   %p
     %b Address:
     = @patient.address
-  .noprint
-    = link_to 'Edit', edit_patient_path(@patient)
-    = link_to 'Back', patients_path
+.noprint
+  = link_to 'Edit', edit_patient_path(@patient)
+  = link_to 'Back', patients_path
