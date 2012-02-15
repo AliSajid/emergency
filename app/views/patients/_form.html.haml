@@ -1,6 +1,6 @@
 = form_for(@patient) do |f|
   - if @patient.errors.any?
-    #error_explanation
+    #error_explanation.noprint
       %h2
         = pluralize(@patient.errors.count, "error")
         prohibited this patient from being saved:
