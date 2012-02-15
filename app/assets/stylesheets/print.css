@@ -7,14 +7,21 @@ display: none;
 /* Ensure the content spans the full width */
 #complaints, #treatments, #investigations
 {
-	float: left; width: 32%; margin: 5px; border-style: solid; border-width:3px; padding: 2px;
+	float: left; width: 31%; margin: 5px; border-style: solid; border-width:1px; padding: 2px;
 }
 /* Change text colour to black (useful for light text on a dark background) */
 .lighttext
 {
 color: #000
 }
-
+#datetime
+{
+	float:left; width:100; border-style:solid;border-width:1px 
+}
+#MLC
+{
+	float:Right; border-style:solid;border-width:1px 
+}
 /* Improve colour contrast of links */
 a:link, a:visited
 {
